@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 import replicate
 
 # App title
@@ -17,7 +18,8 @@ with st.sidebar:
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
     st.markdown('📖 Learn how to build this app in this [blog](#link-to-blog)!')
-    
+os.environ[REPLICATE_API_TOKEN] = replicate_api
+
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [{"role": "assistant", "content": "How may I help you?"}]
@@ -32,8 +34,7 @@ def generate_response(prompt_input, api_token):
     llm='a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5'
     pre_prompt='You are a helpful assistant.'
     output=replicate.run(llm, 
-                         input={"prompt": pre_prompt + 'User: ' + prompt_input + 'Assistant: '}, 
-                         api_token=api_token)
+                         input={"prompt": pre_prompt + 'User: ' + prompt_input + 'Assistant: '})
     return output
 
 # User-provided prompt
