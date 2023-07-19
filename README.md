@@ -1,4 +1,4 @@
-# 📦 Streamlit App Starter Kit 
+# 🦙💬 Llama 2 Chat
 ```
 ⬆️ (Replace above with your app's name)
 ```
