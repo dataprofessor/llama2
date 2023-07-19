@@ -30,9 +30,10 @@ for message in st.session_state.messages:
         st.write(message["content"])
 
 # Function for generating LLM response
+# Pre-Prompt from https://github.com/a16z-infra/llama2-chatbot
 def generate_response(prompt_input, api_token):
     llm='a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5'
-    pre_prompt='You are a helpful assistant.'
+    pre_prompt='You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as Assistant.'
     output=replicate.run(llm, 
                          input={"prompt": pre_prompt + 'User: ' + prompt_input + 'Assistant: '})
     return output
