@@ -41,11 +41,11 @@ def generate_llama2_response(prompt_input):
             string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
 
     output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', 
-                           {"prompt": string_dialogue + "Assistant: "})
+                           {"prompt": string_dialogue + prompt_input + "Assistant: "})
     return output
 
 # User-provided prompt
-if prompt := st.chat_input("Type your question here to talk to LLaMA2"):
+if prompt := st.chat_input():
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.write(prompt)
