@@ -11,7 +11,7 @@ with st.sidebar:
         st.success('API key already provided!', icon='✅')
         replicate_api = st.secrets['REPLICATE_API_TOKEN']
     else:
-        replicate_api = st.text_input('Enter Replicate API key:', type='password')
+        replicate_api = st.text_input('Enter Replicate API token:', type='password')
         if not replicate_api:
             st.warning('Please enter your credentials!', icon='⚠️')
         else:
@@ -47,7 +47,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
     #with st.chat_message("assistant"):
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            response = generate_response(prompt, replicate_api) 
+            response = generate_response(prompt, replicate_api)
             st.write(response) 
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
