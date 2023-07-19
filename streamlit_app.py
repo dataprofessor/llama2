@@ -49,6 +49,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = generate_response(prompt, replicate_api)
-            st.write(response) 
+            for item in response:
+                st.write(item)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
