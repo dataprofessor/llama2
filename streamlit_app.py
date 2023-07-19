@@ -49,6 +49,13 @@ if st.session_state.messages[-1]["role"] != "assistant":
     #with st.chat_message("assistant"):
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
+
+            for dict_message in st.session_state.messages:
+            if dict_message["role"] == "user":
+                string_dialogue = string_dialogue + "User: " + dict_message["content"] + "\n\n"
+            else:
+                string_dialogue = string_dialogue + "Assistant: " + dict_message["content"] + "\n\n"
+            
             response = generate_response(prompt, replicate_api)
             full_response = ''
             #placeholder = st.empty()
