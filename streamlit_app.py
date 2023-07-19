@@ -51,10 +51,10 @@ if st.session_state.messages[-1]["role"] != "assistant":
         with st.spinner("Thinking..."):
             response = generate_response(prompt, replicate_api)
             full_response = ''
-            placeholder = st.empty()
+            #placeholder = st.empty()
             for item in response:
                 full_response += item
-                placeholder.markdown(full_response + "|")
-            placeholder.markdown(full_response)
+                st.markdown(full_response + "|")
+            st.markdown(full_response)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
