@@ -29,7 +29,8 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
-if st.sidebar.button("Clear Chat History"):
+clear_chat_history = st.sidebar.button("Clear Chat History")
+if clear_chat_history:
     st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 
 # Function for generating LLaMA2 response
