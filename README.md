@@ -10,13 +10,11 @@ This app was refactored from [a16z's implementation](https://github.com/a16z-inf
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llama2.streamlitapp.com/)
 
-## Section Heading
+## Getting your own Replicate API token
 
-This is filler text, please replace this with text for this section.
+To use this app, you'll need to get your own [Replicate](https://replicate.com/) API token.
+
+After signing up to Replicate, you can access your API token from [this page](https://replicate.com/account/api-tokens).
 
 ## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+- Read more about [Llama 2](https://ai.meta.com/llama/)
