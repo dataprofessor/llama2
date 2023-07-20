@@ -19,7 +19,7 @@ with st.sidebar:
             st.success('Proceed to entering your prompt message!', icon='👉')
     temperature = st.sidebar.slider('temperature:', min_value=0.01, max_value=5.0, value=0.1, step=0.01)
     top_p = st.sidebar.slider('top_p:', min_value=0.01, max_value=1.0, value=0.9, step=0.01)
-    max_length = st.sidebar.slider('max_length:', min_value=64, max_value=4096, value=2048, step=8)
+    max_length = st.sidebar.slider('max_length:', min_value=64, max_value=4096, value=512, step=8)
     st.markdown('📖 Learn how to build this app in this [blog](#link-to-blog)!')
 os.environ['REPLICATE_API_TOKEN'] = replicate_api
 
