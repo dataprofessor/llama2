@@ -48,7 +48,7 @@ def generate_llama2_response(prompt_input):
             string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
     output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', 
                            input={"prompt": f"{string_dialogue} {prompt_input} Assistant: ",
-                                  "temperature":0.1, "top_p":0.9, "max_length":512, "repetition_penalty":1})
+                                  "temperature":temperature, "top_p":top_p, "max_length":max_length, "repetition_penalty":1})
     return output
 
 # User-provided prompt
