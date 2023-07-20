@@ -19,7 +19,7 @@ with st.sidebar:
             st.success('Proceed to entering your prompt message!', icon='👉')
 
     # Refactored from https://github.com/a16z-infra/llama2-chatbot
-    st.subheader('Model and parameters')
+    st.subheader('Models and parameters')
     selected_model = st.sidebar.selectbox('Choose a Llama2 model', ['Llama2-7B', 'Llama2-13B', 'Llama2-70B'], key='selected_model')
     if selected_model == 'Llama2-7B':
         llm = 'a16z-infra/llama7b-v2-chat:4f0a4744c7295c024a1de15e1a63c880d3da035fa1f49bfd344fe076074c8eea'
