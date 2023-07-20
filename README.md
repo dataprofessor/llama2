@@ -25,4 +25,8 @@ You can also try out the larger models:
 - [Llama2-70B](https://replicate.com/replicate/llama70b-v2-chat)
 
 ## Further Reading
-- Read more about [Llama 2](https://ai.meta.com/llama/)
+- [Llama 2 website](https://ai.meta.com/llama/)
+- [Llama 2 technical overview](https://ai.meta.com/resources/models-and-libraries/llama/)
+- [Llama 2 blog](https://ai.meta.com/blog/llama-2/)
+- [Llama 2 research article](https://ai.meta.com/research/publications/llama-2-open-foundation-and-fine-tuned-chat-models/)
+- [Llama 2 GitHub repo](https://github.com/facebookresearch/llama/tree/main)
