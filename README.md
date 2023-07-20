@@ -1,13 +1,12 @@
 # 🦙💬 Llama 2 Chat
-```
-⬆️ (Replace above with your app's name)
-```
 
-Description of the app ...
+This chatbot is created using the [**Llama 2**](https://ai.meta.com/llama/) model, an open source large language model released by Meta.
+
+Particularly, we're using the [**Llama-7B**](https://replicate.com/a16z-infra/llama7b-v2-chat) model hosted on Replicate
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://starter-kit.streamlitapp.com/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llama2.streamlitapp.com/)
 
 ## Section Heading
 
