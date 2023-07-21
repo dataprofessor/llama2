@@ -4,10 +4,10 @@ import os
 
 # App title
 st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
+st.sidebar.header('🦙💬 Llama 2 Chatbot')
 
 # Replicate Credentials
 with st.sidebar:
-    st.title('🦙💬 Llama 2 Chatbot')
     if 'REPLICATE_API_TOKEN' in st.secrets:
         st.success('API key already provided!', icon='✅')
         replicate_api = st.secrets['REPLICATE_API_TOKEN']
