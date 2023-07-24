@@ -10,6 +10,12 @@ This app was refactored from [a16z's implementation](https://github.com/a16z-inf
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llama2.streamlitapp.com/)
 
+## Prerequisite libraries
+
+```
+streamlit
+```
+
 ## Getting your own Replicate API token
 
 To use this app, you'll need to get your own [Replicate](https://replicate.com/) API token.
