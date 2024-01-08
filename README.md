@@ -23,6 +23,13 @@ To use this app, you'll need to get your own [Replicate](https://replicate.com/)
 
 After signing up to Replicate, you can access your API token from [this page](https://replicate.com/account/api-tokens).
 
+## Installation with Docker
+
+```
+docker build -t llama2 .
+docker run -p 8501:8501 -v $(pwd):/app llama2
+```
+
 ## Other Llama 2 models to try
 
 As mentioned above, this chatbot implementation uses the [**Llama2-7B**](https://replicate.com/a16z-infra/llama7b-v2-chat) model that was trained on 7 billion parameters.
